@@ -1,15 +1,29 @@
 {
-  "name": "weekly_reminder",
+  "name": "mailminder",
   "version": "1.0.0",
   "description": "Send weekly email reminders to your team",
   "main": "send_mail.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "David Baldwynn",
+  "license": "MIT",
   "dependencies": {
     "cron-parser": "^0.6.1",
     "minimist": "^1.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whitef0x0/mailminder.git"
+  },
+  "keywords": [
+    "reminder",
+    "mail",
+    "nodemailer"
+  ],
+  "bugs": {
+    "url": "https://github.com/whitef0x0/mailminder/issues"
+  },
+  "homepage": "https://github.com/whitef0x0/mailminder"
 }

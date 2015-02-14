@@ -5,14 +5,16 @@ var mail = require('./send_mail'),
 	parser = require('cron-parser'),
 	fs = require('fs');
 
-//Default Schedule is every Friday at midnight
-var default_schedule = '00 00 06 * 5',
+//Default Schedule is every Friday at 6PM
+var default_schedule = '06 00 06 * 5',
     default_timezone = "America/Los_Angeles";
 
 
-if( argv._[0] === 'start' && argv.f){
+if( argv._[0] === 'start' && argv.file){
 
-	var email_file = argv.f
+	var email_file = argv.file;
+	var tz = default_timezone;
+	if( argv.tz ) timezone = argv.tz;
 
 	if( argv.interval ){
 		cron_tab =  argv.interval;
