@@ -15,12 +15,15 @@ Usage (basic commandline usage):
 ==========
 
 To start with a weekly reminder (default schedule is every Friday at 6:00PM PST)
+
     node ./mailminder start --from==example@domain.com --to==someone@somewhere.com
     
 If you want to specify a list of line seperated emails, use the -f option
+
     node ./mailminder start -f ./example_emails
 
 If you want to specify a specific crontab schedule use the --interval option
+
     node ./mailminder start --from==example@domain.com --to==someone@somewhere.com --interval=='*****'
     
     
