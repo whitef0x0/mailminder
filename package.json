@@ -1,0 +1,15 @@
+{
+  "name": "weekly_reminder",
+  "version": "1.0.0",
+  "description": "Send weekly email reminders to your team",
+  "main": "send_mail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron-parser": "^0.6.1",
+    "minimist": "^1.1.0"
+  }
+}
