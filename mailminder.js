@@ -1,6 +1,6 @@
 var argv = require('minimist')(process.argv.slice(2));
 
-var mail = require('./send_mail'),
+var mail = require('./lib/send_mail'),
 	CronJob = require('cron').CronJob,
 	parser = require('cron-parser'),
 	fs = require('fs');
