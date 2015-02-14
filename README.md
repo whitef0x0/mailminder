@@ -1,4 +1,4 @@
-node-cron
+mailminder
 =========
 
 [![Build Status](https://secure.travis-ci.org/ncb000gt/node-cron.png)](http://travis-ci.org/#!/ncb000gt/node-cron)
