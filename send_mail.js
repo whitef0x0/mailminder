@@ -5,13 +5,7 @@ var nodemailer = require('nodemailer'),
     moment = require('moment'),
     readline = require('readline'),
     g_api = require('googleapis'),
-    utils = require('./lib/utils');
-
-var CLIENT_ID = '524468059155-lkokhuo7cd274h8pevudeud41je3bum0.apps.googleusercontent.com',
-    CLIENT_SECRET = '1085202437042059241',
-    REDIRECT_URL = 'http://localhost',
-    SCOPE = 'https://www.googleapis.com/auth/drive.file';
-
+    utils = require('./utils');
 
 // //Create Google Docs File
 // var auth = new googleapis.OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
@@ -41,13 +35,13 @@ var CLIENT_ID = '524468059155-lkokhuo7cd274h8pevudeud41je3bum0.apps.googleuserco
 function WeeklyReminder() {}
 
 WeeklyReminder.send_reminder = function(emails_file_path){
-
+    console.log("hello");
     var month_name = moment(Date.now()).format('MMMM');
     var day_name = moment(Date.now()).format('dddd');
     var month_and_day_num = month_name + " " + moment(Date.now()).format('Do'); 
     var emails = utils.getEmailsFromFile(emails_file_path);
 
-    var template = swig.compileFile('./templates/reminder_template.html');
+    var template = swig.compileFile('../templates/reminder_template.html');
     var html_email = template({
         pagename: 'Reminder',
         greeting: 'Hello everyone',
@@ -55,7 +49,7 @@ WeeklyReminder.send_reminder = function(emails_file_path){
         month_date: month_and_day_num,
         day_of_week: day_name,
         closing: "Have a great weekend!",
-        google_docs_url: 'https://docs.google.com/document/d/1T21lwW__bQD39q9q0yetoYZsysB4DNRiZ6YHaFsf8QY/edit',
+        google_docs_url: 'https://drive.google.com/folderview?id=0B7N2PGptzyQxYmJfNmxabGMyMGc&usp=sharing',
         from: "The MetaOptima Reminder Bot"
     });
 
@@ -63,8 +57,8 @@ WeeklyReminder.send_reminder = function(emails_file_path){
     var transporter = nodemailer.createTransport({
         service:'Mandrill',
         auth: {
-            user: 'hackouver@gmail.com',
-            pass: 'N501HX9nxAkr7tLAU4vK2w'
+            user: 'xxxxx@xxxxx.com',
+            pass: 'xxxxxxxxxxxxxxxxxx'
         },
     });
 
