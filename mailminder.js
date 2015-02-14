@@ -14,7 +14,10 @@ if( argv._[0] === 'start' && argv.file){
 
 	var email_file = argv.file;
 	var tz = default_timezone;
+	var cron_tab = default_schedule;
+
 	if( argv.tz ) timezone = argv.tz;
+	if( argv.interval ) cron_tab = interval;
 
 	if( argv.interval ){
 		cron_tab =  argv.interval;
